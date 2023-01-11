@@ -1,7 +1,7 @@
 package web.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import web.model.Car;
@@ -12,7 +12,7 @@ import java.util.List;
 @Controller
 public class CarController {
     @GetMapping(value = "/cars")
-    public String getCars(ModelMap model, @RequestParam(value = "count", defaultValue = "5") int count){
+    public String getCars(Model model, @RequestParam(value = "count", defaultValue = "5") int count){
         List<Car> car = new ArrayList<>();
         car.add(new Car("Skoda", "Fabia", "Red"));
         car.add(new Car("BMW", "X5","Black"));
