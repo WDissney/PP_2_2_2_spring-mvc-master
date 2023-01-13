@@ -16,7 +16,7 @@
         <tr th:each="car, iterStat : ${cars}"
             th:style="${iterStat.odd}">
             <td th:text="${iterStat.index}+1"></td>
-            <td th:text="${car.toString()}"></td>
+            <td th:text="${car}"></td>
         </tr>
         </tbody>
     </table>
